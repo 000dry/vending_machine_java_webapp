@@ -1,4 +1,5 @@
-import MoneyHandlers.Coin;
+import Money.Coin;
+import User.User;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,5 @@
-import MoneyHandlers.AvailableChange;
-import MoneyHandlers.Coin;
+import Money.AvailableChange;
+import Money.Coin;
 import org.junit.Before;
 import org.junit.Test;
 

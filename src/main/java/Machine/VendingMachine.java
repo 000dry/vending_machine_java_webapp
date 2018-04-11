@@ -1,8 +1,8 @@
-package MachineComponents;
+package Machine;
 
-import MoneyHandlers.AvailableChange;
-import MoneyHandlers.Coin;
-import StockTypes.StockItem;
+import Money.AvailableChange;
+import Money.Coin;
+import Stock.StockItem;
 
 import java.util.ArrayList;
 

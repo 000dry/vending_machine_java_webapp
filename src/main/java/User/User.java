@@ -1,4 +1,6 @@
-import MoneyHandlers.Coin;
+package User;
+
+import Money.Coin;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-import MoneyHandlers.Coin;
+import Money.Coin;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

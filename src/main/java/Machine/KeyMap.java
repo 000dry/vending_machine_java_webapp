@@ -1,6 +1,6 @@
-package MachineComponents;
+package Machine;
 
-import StockTypes.StockItem;
+import Stock.StockItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;

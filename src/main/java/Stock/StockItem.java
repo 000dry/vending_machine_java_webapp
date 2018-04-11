@@ -1,4 +1,4 @@
-package StockTypes;
+package Stock;
 
 public abstract class StockItem {
 

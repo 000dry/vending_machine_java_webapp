@@ -1,10 +1,11 @@
-import MachineComponents.VendingMachine;
-import MoneyHandlers.AvailableChange;
-import MoneyHandlers.Coin;
-import StockTypes.Chocolate;
-import StockTypes.Drink;
-import StockTypes.Savoury;
-import StockTypes.StockItem;
+import Machine.VendingMachine;
+import Money.AvailableChange;
+import Money.Coin;
+import Stock.Chocolate;
+import Stock.Drink;
+import Stock.Savoury;
+import Stock.StockItem;
+import User.User;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -150,7 +151,7 @@ public class VendingMachineTest {
     @Test
     public void userCanInsertCoinIfAvailableInWallet(){
         Coin coin = Coin.DOLLAR;
-        boolean userHasCoin = user.removeCoinFromWallet(coin); //User set up with 2 * DOLLAR at @Before -- will equal true
+        boolean userHasCoin = user.removeCoinFromWallet(coin); //User.User set up with 2 * DOLLAR at @Before -- will equal true
         vendingMachine.insertCoin(userHasCoin, coin);
         assertEquals(1, vendingMachine.getCoinsInserted().size());
     }
@@ -158,7 +159,7 @@ public class VendingMachineTest {
     @Test
     public void userCannotInsertCoinsNotInWallet(){
         Coin coin = Coin.DIME;
-        boolean userHasCoin = user.removeCoinFromWallet(coin); //User not given DIME at @Before -- will equal false
+        boolean userHasCoin = user.removeCoinFromWallet(coin); //User.User not given DIME at @Before -- will equal false
         vendingMachine.insertCoin(userHasCoin, coin);
         assertEquals(0, vendingMachine.getCoinsInserted().size());
     }

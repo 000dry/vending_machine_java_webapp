@@ -1,4 +1,4 @@
-package MoneyHandlers;
+package Money;
 
 public enum Coin {
 

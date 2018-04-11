@@ -1,4 +1,4 @@
-package StockTypes;
+package Stock;
 
 public class Savoury extends StockItem {
 

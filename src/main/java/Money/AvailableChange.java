@@ -1,4 +1,4 @@
-package MoneyHandlers;
+package Money;
 
 import java.util.ArrayList;
 

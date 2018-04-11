@@ -1,5 +1,5 @@
-import StockTypes.Savoury;
-import StockTypes.StockItem;
+import Stock.Savoury;
+import Stock.StockItem;
 import org.junit.Before;
 import org.junit.Test;
 
