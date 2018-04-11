@@ -16,9 +16,10 @@ public class App{
     StockItem item1;
     StockItem item2;
     StockItem item3;
+    String lastInput;
 
     public App(){
-        this.availableChange = new AvailableChange(25, 40, 60, 75);
+        this.availableChange = new AvailableChange(30, 40, 60, 80);
         this.vendingMachine = new VendingMachine(availableChange, 10);
 
         this.user = new User();
