@@ -72,11 +72,11 @@ public class VendingMachine {
     //SERVICING
 
     public void refillAllCoins() {
-        if(availableChange.getChange().size() == 0) {
-            availableChange.refillDollars();
-            availableChange.refillQuarters();
-            availableChange.refillDimes();
-            availableChange.refillNickels();
+        if(this.availableChange.getChange().size() == 0) {
+            this.availableChange.refillDollars();
+            this.availableChange.refillQuarters();
+            this.availableChange.refillDimes();
+            this.availableChange.refillNickels();
         }
     }
 
