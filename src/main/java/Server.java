@@ -10,7 +10,13 @@ public class Server {
                 .port(7070)
                 .enableStaticFiles("/public")
                 .start();
-
+        server.ws("/vendor", ws -> {
+            ws.onConnect(session -> System.out.println("Connected"));
+            ws.onMessage((session, message) -> {
+                System.out.println("Received: " + message);
+                session.getRemote().sendString("Echo server: " + message);
+            });
+        });
 
     }
 }
