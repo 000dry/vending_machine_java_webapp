@@ -1,3 +1,5 @@
+package App;
+
 import Machine.VendingMachine;
 import Money.AvailableChange;
 import Money.Coin;
@@ -10,7 +12,7 @@ import User.User;
 
 public class App{
 
-    VendingMachine vendingMachine;
+    public VendingMachine vendingMachine;
     User user;
     AvailableChange availableChange;
     StockItem item1;

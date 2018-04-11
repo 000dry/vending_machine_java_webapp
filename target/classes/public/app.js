@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
   ws.onopen = function(){
     console.log("Websocket open!");
     ws.send("Hello server!");
-    setTimeout(function(){ws.send("A");}, 1000);
+    setTimeout(function(){ws.send("DOLLAR");}, 1000);
   };
 
   ws.onmessage = function(event){
