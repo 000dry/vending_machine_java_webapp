@@ -8,7 +8,7 @@ import Stock.StockItem;
 import User.User;
 
 
-public class App {
+public class App{
 
     VendingMachine vendingMachine;
     User user;
@@ -39,6 +39,4 @@ public class App {
         this.user.addCoinToWallet(Coin.DIME);
         this.user.addCoinToWallet(Coin.NICKEL); //User.User starts with $3.00
     }
-
-
 }
