@@ -6,7 +6,7 @@ A vending machine modelled in Java and hooked up to the front-end using the Java
 
 ## Getting Started
 
-This app can be deployed locally from command line. Navigate from the root directory to /target/ and run the following command:
+This app can be deployed locally from command line. Navigate from the root directory to /target and run the following command:
 
 ```
 java -jar com.example.deltaDNATest-1.0-SNAPSHOT-jar-with-dependencies.jar
