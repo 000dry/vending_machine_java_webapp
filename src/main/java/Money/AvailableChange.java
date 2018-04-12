@@ -77,4 +77,8 @@ public class AvailableChange {
             nickelCount++;
         }
     }
+
+    public void removeCoin(Coin coin) {
+        this.change.remove(coin);
+    }
 }

@@ -118,9 +118,44 @@ public class VendingMachine {
     }
 
     public void addCoinsInsertedToAvailableChange() {
-        for(int i = this.coinsInserted.size(); i > 0 ; i--){
-            Coin coin = this.coinsInserted.remove(i-1);
-            this.availableChange.addCoin(coin);
+        if(this.coinsInserted.size() != 0) {
+            for (int i = this.coinsInserted.size(); i > 0; i--) {
+                Coin coin = this.coinsInserted.remove(i - 1);
+                this.availableChange.addCoin(coin);
+            }
         }
     }
+
+    public ArrayList<Coin> giveChangeFromTransaction(){
+        ArrayList<Coin> coinsToReturn = new ArrayList<>();
+        double dollarValue = Coin.DOLLAR.getValue();
+        double quarterValue = Coin.QUARTER.getValue();
+        double dimeValue = Coin.DIME.getValue();
+        double nickelValue = Coin.NICKEL.getValue();
+
+        while(this.getRunningTotal() >= dollarValue){
+            coinsToReturn.add(Coin.DOLLAR);
+            this.availableChange.removeCoin(Coin.DOLLAR);
+            this.runningTotal -= dollarValue;
+        }
+        while(this.getRunningTotal() >= quarterValue){
+            coinsToReturn.add(Coin.QUARTER);
+            this.availableChange.removeCoin(Coin.QUARTER);;
+            this.runningTotal -= quarterValue;
+        }
+        while(this.getRunningTotal() >= dimeValue){
+            coinsToReturn.add(Coin.DIME);
+            this.availableChange.removeCoin(Coin.DIME);
+            this.runningTotal -= dimeValue;
+        }
+        while(this.getRunningTotal() >= nickelValue){
+            coinsToReturn.add(Coin.NICKEL);
+            this.availableChange.removeCoin(Coin.NICKEL);
+            this.runningTotal -= nickelValue;
+        }
+        this.runningTotal = 0;
+        return coinsToReturn;
+    }
+
+
 }

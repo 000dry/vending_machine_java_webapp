@@ -9,6 +9,8 @@ import User.User;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class VendingMachineTest {
@@ -191,6 +193,19 @@ public class VendingMachineTest {
         vendingMachine.refillAllCoins();
         vendingMachine.addCoinsInsertedToAvailableChange();
         assertEquals(215, vendingMachine.getAvailableChange().getChange().size());
+    }
+
+    @Test
+    public void canGiveChangeFromTransactionToUser(){
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.DOLLAR);
+        vendingMachine.addCoinToCoinsInserted(Coin.DOLLAR);
+        vendingMachine.addCoinToCoinsInserted(Coin.NICKEL);
+        vendingMachine.refillAllCoins();
+        ArrayList<Coin> change = vendingMachine.giveChangeFromTransaction();
+        user.receiveChange(change);
+        assertEquals(206, vendingMachine.getAvailableChange().getChange().size());
+        assertEquals(8, user.getWallet().size());
     }
 
 }

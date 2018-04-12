@@ -2,6 +2,8 @@ package ClientHandlers;
 
 import App.App;
 import Money.Coin;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MessageHandler {
@@ -40,6 +42,9 @@ public class MessageHandler {
             app.getVendingMachine().refillAllCoins();
 
         } else if(this.message.equals("RETURN")) {
+            app.getVendingMachine().addCoinsInsertedToAvailableChange();
+            ArrayList<Coin> change = app.getVendingMachine().giveChangeFromTransaction();
+            app.getUser().receiveChange(change);
 
         } else {
             System.out.println("^--Invalid message from Client");

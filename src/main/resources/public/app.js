@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const textDisplay = document.getElementById('text-display')
   const keyButtons = document.getElementsByClassName('key-button');
   const coinButtons = document.getElementsByClassName('coin-button');
+  const returnButton = document.getElementById('return');
   const serviceButton = document.getElementById('service');
 
 
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function(){
         setTimeout(function(){
           const valueToDisplay = coinHandler.runningTotal;
           textDisplay.innerHTML = "Amount inserted: " + valueToDisplay.toFixed(2);
-        }, 1000)
+        }, 3000)
       }
     })
   }
@@ -78,8 +79,19 @@ document.addEventListener("DOMContentLoaded", function(){
     })
   }
 
+  //RETURN BUTTON CAN RETURN APPROPRIATE NUMBER AND VALUE OF COINS BEFORE OR AFTER TRANSACTION
+
+  returnButton.addEventListener('click', function(){
+    coinHandler.runningTotal = 0;
+    textDisplay.innerHTML = "0.00";
+    ws.send(returnButton.value);
+    setTimeout(function(){
+      textDisplay.innerHTML = "Insert Coins To Begin";
+    }, 3000)
+  })
+
   // SERVICE BUTTON EMPTIES CHANGE AND REFILLS TO INITIAL STATE AND RESTOCKS ITEMS
   serviceButton.addEventListener('click', function(){
-    ws.send("SERVICE");
+    ws.send(serviceButton.value);
   })
 })
