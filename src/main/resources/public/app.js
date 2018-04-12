@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   //APP SETUP
-  const ws = new WebSocket("ws://" + location.hostname + ":" + location.port + "/vendor");
+  const ws = new WebSocket("wss://" + location.hostname + ":" + location.port + "/vendor");
   let appJSON = null;
 
   let coinHandler = {
