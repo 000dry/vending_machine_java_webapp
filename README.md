@@ -25,5 +25,5 @@ http://localhost:7070/
 
 ## Acknowledgments
 
-* The server for this app was adapted from a few tutorials found at https://javalin.io/tutorials/
+The server for this app was adapted from a few tutorials found at https://javalin.io/tutorials/ by [David Åse](https://github.com/tipsy/)
 
