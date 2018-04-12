@@ -17,6 +17,8 @@ This will run the app and launch the server, which can be found in the browser a
 http://localhost:7070/
 ```
 
+Alternatively, run Server.java from IntelliJ.
+
 ## Built With
 
 * [Javalin](https://javalin.io/) - The web framework used
@@ -25,5 +27,5 @@ http://localhost:7070/
 
 ## Acknowledgments
 
-The server for this app was adapted from a few tutorials found at https://javalin.io/tutorials/ by [David Åse](https://github.com/tipsy/)
+The server for this app was adapted from a few tutorials found at https://javalin.io/tutorials/ by [David Åse](https://github.com/tipsy/).
 
