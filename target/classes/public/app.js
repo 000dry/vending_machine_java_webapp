@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   //APP SETUP
-  const ws = new WebSocket("ws://" + location.hostname + ":" + location.port + "/vendor");
+  console.log(location.hostname);
+  const protocol = location.hostname == 'vending-machine-app.herokuapp.com' ? "wss://" : "ws://";
+
+  const ws = new WebSocket(protocol + location.hostname + ":" + location.port + "/vendor");
   let appJSON = null;
 
   let coinHandler = {
@@ -15,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   ws.onopen = function(){
+
     console.log("Websocket open!");
     ws.send("Hello server!");
   };
+
   //EVERY TIME APP.JAVA'S STATE IS UPDATED IT IS RECEIVED HERE AS JSON AND STORED IN APPJSON VARIABLE AT TOP
   ws.onmessage = function(event){
     appJSON = JSON.parse(event.data);
