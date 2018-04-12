@@ -12,15 +12,22 @@ public class VendingMachine {
     ArrayList<Coin> coinsInserted;
     int maxStockPerItem;
     KeyMap allItems;
+    double runningTotal;
 
     public VendingMachine(AvailableChange availableChange, int maxStockPerItem){
        this.availableChange = availableChange;
        this.coinsInserted = new ArrayList<>();
        this.maxStockPerItem = maxStockPerItem;
        this.allItems = new KeyMap();
+       this.runningTotal = 0.00;
     }
 
     //GETTERS
+
+
+    public AvailableChange getAvailableChange() {
+        return this.availableChange;
+    }
 
     public ArrayList<Coin> getCoinsInserted() {
         return this.coinsInserted;
@@ -33,6 +40,8 @@ public class VendingMachine {
     public int getStockCountOf(String key) {
         return this.allItems.stock.get(key).size();
     }
+
+    public double getRunningTotal(){ return Math.round(this.runningTotal * 100.00)/100.00; }
 
     //STOCK
 
@@ -63,7 +72,7 @@ public class VendingMachine {
         if(remainingStock.size() > 0) {
             StockItem vendedItem = remainingStock.remove(0);
             this.allItems.removeStock(key, remainingStock);
-
+            this.runningTotal -= vendedItem.getPrice();
             return vendedItem;
         }
         return null;
@@ -80,16 +89,16 @@ public class VendingMachine {
         }
     }
 
-    public double getTotalValueOfChange() {
-        ArrayList<Coin> coins = this.availableChange.getChange();
-        double total = 0.00;
-
-        for(int i = 0; i < coins.size(); i++){
-            double coin = coins.get(i).getValue();
-            total += coin;
-        }
-        return Math.round(total*100.00)/100.00;
-    }
+//    public double getTotalValueOfChange() {
+//        ArrayList<Coin> coins = this.availableChange.getChange();
+//        double total = 0.00;
+//
+//        for(int i = 0; i < coins.size(); i++){
+//            double coin = coins.get(i).getValue();
+//            total += coin;
+//        }
+//        return Math.round(total*100.00)/100.00;
+//    }
 
     public void emptyAllCoins() {
         this.availableChange.getChange().clear();
@@ -99,11 +108,19 @@ public class VendingMachine {
 
     public void addCoinToCoinsInserted(Coin coin){
         this.coinsInserted.add(coin);
+        this.runningTotal += coin.getValue();
     }
 
     public void insertCoin(boolean userHasCoin, Coin coin) {
         if(userHasCoin){
             this.addCoinToCoinsInserted(coin);
+        }
+    }
+
+    public void addCoinsInsertedToAvailableChange() {
+        for(int i = this.coinsInserted.size(); i > 0 ; i--){
+            Coin coin = this.coinsInserted.remove(i-1);
+            this.availableChange.addCoin(coin);
         }
     }
 }

@@ -1,4 +1,4 @@
-package Handlers;
+package ClientHandlers;
 
 import Money.Coin;
 import java.util.HashMap;

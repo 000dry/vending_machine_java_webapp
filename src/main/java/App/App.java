@@ -12,16 +12,15 @@ import User.User;
 
 public class App{
 
-    public VendingMachine vendingMachine;
+    VendingMachine vendingMachine;
     User user;
     AvailableChange availableChange;
     StockItem item1;
     StockItem item2;
     StockItem item3;
-    String lastInput;
 
     public App(){
-        this.availableChange = new AvailableChange(30, 40, 60, 80);
+        this.availableChange = new AvailableChange(30, 40, 60, 80); //AvailableChange starts with 210 coins
         this.vendingMachine = new VendingMachine(availableChange, 10);
 
         this.user = new User();
@@ -30,7 +29,7 @@ public class App{
         this.item2 = new Chocolate("Snickers", 1.00, "Peanut");
         this.item3 = new Drink("Dr Pepper", 1.25);
 
-        this.vendingMachine.refillAllCoins();
+        this.vendingMachine.refillAllCoins(); //VendingMachine starts with $50.00
         this.vendingMachine.restockAllItems(this.item1, this.item2, this.item3);
 
         this.user.addCoinToWallet(Coin.DOLLAR);
@@ -40,6 +39,26 @@ public class App{
         this.user.addCoinToWallet(Coin.QUARTER);
         this.user.addCoinToWallet(Coin.DIME);
         this.user.addCoinToWallet(Coin.DIME);
-        this.user.addCoinToWallet(Coin.NICKEL); //User.User starts with $3.00
+        this.user.addCoinToWallet(Coin.NICKEL); //User starts with $3.00
+    }
+
+    public VendingMachine getVendingMachine() {
+        return this.vendingMachine;
+    }
+
+    public User getUser(){
+        return this.user;
+    }
+
+    public StockItem getItem1(){
+        return this.item1;
+    }
+
+    public StockItem getItem2() {
+        return this.item2;
+    }
+
+    public StockItem getItem3() {
+        return this.item3;
     }
 }

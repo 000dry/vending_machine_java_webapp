@@ -1,5 +1,5 @@
 import App.App;
-import Handlers.MessageHandler;
+import ClientHandlers.MessageHandler;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -30,10 +30,10 @@ public class Server {
         server.ws("/vendor", ws -> {
             ws.onConnect(session -> {
                 session.getRemote().sendString(jsonInString);
-                System.out.println("Connected");});
+                System.out.println("Connected");
+            });
 
             ws.onMessage((WsSession session, String message) -> {
-                System.out.println(message);
                 mH = new MessageHandler(message, app);
                 mH.commandFromClient();
                 String updatedJsonInString = mapper.writeValueAsString(app);

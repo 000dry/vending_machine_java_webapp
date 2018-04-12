@@ -115,16 +115,16 @@ public class VendingMachineTest {
         assertEquals(210, availableChange.getChange().size());
     }
 
-    @Test
-    public void canGetTotalValueOfAvailableChange__empty(){
-        assertEquals(0.00, vendingMachine.getTotalValueOfChange(), 0.00);
-    }
-
-    @Test
-    public void canGetTotalValueOfAvailableChange__afterRefill(){
-        vendingMachine.refillAllCoins();
-        assertEquals(50.00, vendingMachine.getTotalValueOfChange(), 0.00);
-    }
+//    @Test
+//    public void canGetTotalValueOfAvailableChange__empty(){
+//        assertEquals(0.00, vendingMachine.getTotalValueOfChange(), 0.00);
+//    }
+//
+//    @Test
+//    public void canGetTotalValueOfAvailableChange__afterRefill(){
+//        vendingMachine.refillAllCoins();
+//        assertEquals(50.00, vendingMachine.getTotalValueOfChange(), 0.00);
+//    }
 
     @Test
     public void canOnlyRefillChangeWhenEmpty(){
@@ -164,7 +164,33 @@ public class VendingMachineTest {
         assertEquals(0, vendingMachine.getCoinsInserted().size());
     }
 
+    @Test
+    public void runningTotalUpdatesWhen__coinIsInserted(){
+       vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+       vendingMachine.addCoinToCoinsInserted(Coin.DIME);
+       assertEquals(0.35, vendingMachine.getRunningTotal(), 0.00);
+    }
 
+    @Test
+    public void runningTotalUpdatesWhen__itemIsVended(){
+        vendingMachine.restockAllItems(item1, item2, item3);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.vendItem("A");
+        assertEquals(0.10, vendingMachine.getRunningTotal(), 0.00);
+    }
 
+    @Test
+    public void canAddAllCoinsInsertedToAvailableChange(){
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.addCoinToCoinsInserted(Coin.QUARTER);
+        vendingMachine.refillAllCoins();
+        vendingMachine.addCoinsInsertedToAvailableChange();
+        assertEquals(215, vendingMachine.getAvailableChange().getChange().size());
+    }
 
 }
