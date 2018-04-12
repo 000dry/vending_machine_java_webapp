@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   //APP SETUP
-  console.log("git push success");
   const protocol = location.hostname == 'vending-machine-app.herokuapp.com' ? "wss://" : "ws://";
 
   const ws = new WebSocket(protocol + location.hostname + ":" + location.port + "/vendor");
