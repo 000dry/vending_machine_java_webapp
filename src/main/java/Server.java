@@ -8,7 +8,7 @@ import io.javalin.Javalin;
 import io.javalin.embeddedserver.jetty.websocket.WsSession;
 
 
-public class Server {
+public class Server { //Server adapted from https://javalin.io/tutorials/
 
     public static App app;
     public static MessageHandler mH;
