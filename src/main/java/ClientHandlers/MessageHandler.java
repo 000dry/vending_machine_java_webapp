@@ -45,6 +45,7 @@ public class MessageHandler {
             this.app.getVendingMachine().addCoinsInsertedToAvailableChange();
             ArrayList<Coin> change = this.app.getVendingMachine().giveChangeFromTransaction();
             this.app.getUser().receiveChange(change);
+            this.app.getUser().countAllCoins();
 
         } else {
             System.out.println("^--Non-actionable message from Client");

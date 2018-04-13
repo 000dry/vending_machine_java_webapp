@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="0" name="VendingMachineTest" time="0.02" errors="0" skipped="0">
+<testsuite tests="18" failures="0" name="VendingMachineTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="10+46"/>
@@ -65,22 +65,22 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="VendingMachineTest" name="canGetAmountInserted__startsEmpty" time="0.007"/>
-  <testcase classname="VendingMachineTest" name="userCanInsertCoinIfAvailableInWallet" time="0.002"/>
-  <testcase classname="VendingMachineTest" name="runningTotalUpdatesWhen__itemIsVended" time="0.003"/>
-  <testcase classname="VendingMachineTest" name="canGetMaxStockPerItem" time="0.001"/>
-  <testcase classname="VendingMachineTest" name="canRefillAllCoins" time="0.003"/>
-  <testcase classname="VendingMachineTest" name="runningTotalUpdatesWhen__coinIsInserted" time="0.001"/>
+  <testcase classname="VendingMachineTest" name="canGetAmountInserted__startsEmpty" time="0"/>
+  <testcase classname="VendingMachineTest" name="userCanInsertCoinIfAvailableInWallet" time="0"/>
+  <testcase classname="VendingMachineTest" name="runningTotalUpdatesWhen__itemIsVended" time="0"/>
+  <testcase classname="VendingMachineTest" name="canGetMaxStockPerItem" time="0"/>
+  <testcase classname="VendingMachineTest" name="canRefillAllCoins" time="0"/>
+  <testcase classname="VendingMachineTest" name="runningTotalUpdatesWhen__coinIsInserted" time="0"/>
   <testcase classname="VendingMachineTest" name="canGiveChangeFromTransactionToUser" time="0"/>
   <testcase classname="VendingMachineTest" name="canEmptyAvailableChange" time="0"/>
   <testcase classname="VendingMachineTest" name="canVendItem__returnsItem" time="0"/>
   <testcase classname="VendingMachineTest" name="canVendItem__diminishesStock" time="0"/>
-  <testcase classname="VendingMachineTest" name="canAddItemsToVendingMachineStock" time="0.001"/>
+  <testcase classname="VendingMachineTest" name="canAddItemsToVendingMachineStock" time="0"/>
   <testcase classname="VendingMachineTest" name="canAddCoinToAmountInserted" time="0"/>
-  <testcase classname="VendingMachineTest" name="canAddAllCoinsInsertedToAvailableChange" time="0.001"/>
+  <testcase classname="VendingMachineTest" name="canAddAllCoinsInsertedToAvailableChange" time="0"/>
   <testcase classname="VendingMachineTest" name="canAccessStockViaAlphabeticKeys__shouldStartEmpty" time="0"/>
   <testcase classname="VendingMachineTest" name="canOnlyRefillChangeWhenEmpty" time="0"/>
-  <testcase classname="VendingMachineTest" name="canRestockItemToMaximumStock" time="0.001"/>
+  <testcase classname="VendingMachineTest" name="canRestockItemToMaximumStock" time="0"/>
   <testcase classname="VendingMachineTest" name="canRestockAllItemsToMaximumStock" time="0"/>
   <testcase classname="VendingMachineTest" name="canVendItem__unlessStockIsEmpty" time="0"/>
 </testsuite>

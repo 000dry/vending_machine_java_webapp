@@ -3,40 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="b90e1011-96db-4392-bb47-a6199298b125" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Machine/VendingMachine.java" afterPath="$PROJECT_DIR$/src/main/java/Machine/VendingMachine.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" afterPath="$PROJECT_DIR$/target/classes/Server.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java" afterPath="$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/style.css" afterPath="$PROJECT_DIR$/src/main/resources/public/style.css" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientHandlers/MessageHandler.class" afterPath="$PROJECT_DIR$/target/classes/ClientHandlers/MessageHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Machine/VendingMachine.class" afterPath="$PROJECT_DIR$/target/classes/Machine/VendingMachine.class" />
       <change beforePath="$PROJECT_DIR$/target/com.example.deltaDNATest-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/com.example.deltaDNATest-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <change beforePath="$PROJECT_DIR$/target/com.example.deltaDNATest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/com.example.deltaDNATest-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/App/App.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/App/App.class" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/ClientHandlers/MessageHandler.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/ClientHandlers/MessageHandler.class" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Server.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Server.class" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/User/User.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/User/User.class" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/app.js" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/public/app.js" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/index.html" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Machine/VendingMachine.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Machine/VendingMachine.class" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/com.example.deltaDNATest-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/heroku/app/target/com.example.deltaDNATest-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/com.example.deltaDNATest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/heroku/app/target/com.example.deltaDNATest-1.0-SNAPSHOT.jar" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/AvailableChangeTest.txt" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/AvailableChangeTest.txt" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/StockItemTest.txt" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/StockItemTest.txt" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-AvailableChangeTest.xml" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-AvailableChangeTest.xml" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-StockItemTest.xml" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-StockItemTest.xml" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-UserTest.xml" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-UserTest.xml" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-VendingMachineTest.xml" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-VendingMachineTest.xml" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/UserTest.txt" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/UserTest.txt" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/VendingMachineTest.txt" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/VendingMachineTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/UserTest.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/test-classes/UserTest.class" />
       <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/VendingMachineTest.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/test-classes/VendingMachineTest.class" />
       <change beforePath="$PROJECT_DIR$/target/heroku/slug.tgz" afterPath="$PROJECT_DIR$/target/heroku/slug.tgz" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/AvailableChangeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/AvailableChangeTest.txt" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/StockItemTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/StockItemTest.txt" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-AvailableChangeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-AvailableChangeTest.xml" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-StockItemTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-StockItemTest.xml" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-UserTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-UserTest.xml" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-VendingMachineTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-VendingMachineTest.xml" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/UserTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/UserTest.txt" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/VendingMachineTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/VendingMachineTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/UserTest.class" afterPath="$PROJECT_DIR$/target/test-classes/UserTest.class" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/VendingMachineTest.class" afterPath="$PROJECT_DIR$/target/test-classes/VendingMachineTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,7 +46,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Machine/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="971">
@@ -76,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="357">
+              <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -99,8 +95,8 @@
       <file leaf-file-name="MessageHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="398">
+              <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,8 +117,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-525">
-              <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+            <state relative-caret-position="246">
+              <caret line="97" column="32" lean-forward="false" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -199,16 +195,16 @@
         <option value="$PROJECT_DIR$/src/main/java/Handlers/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Money/AvailableChange.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/App/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/User/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/app.js" />
         <option value="$PROJECT_DIR$/src/test/java/UserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Machine/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/app.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/style.css" />
       </list>
     </option>
   </component>
@@ -867,30 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/User/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="50" column="84" lean-forward="false" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/App/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -906,32 +878,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
-          <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="40" column="43" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,6 +900,56 @@
             <element signature="e#2436#2437#0" expanded="true" />
             <element signature="e#2492#2493#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/User/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ClientHandlers/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="50" column="84" lean-forward="false" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="40" column="43" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="97" column="32" lean-forward="false" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
