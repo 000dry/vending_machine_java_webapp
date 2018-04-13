@@ -1,0 +1,13 @@
+Stock/Savoury.class
+Money/AvailableChange.class
+Stock/StockItem.class
+Machine/VendingMachine.class
+Money/Coin.class
+Stock/Chocolate.class
+Stock/Drink.class
+App/App.class
+Server.class
+Machine/KeyMap.class
+ClientHandlers/MessageHandler.class
+User/User.class
+ClientHandlers/CoinHandler.class

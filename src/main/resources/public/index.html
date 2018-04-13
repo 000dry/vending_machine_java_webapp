@@ -2,18 +2,25 @@
 <html lang="en">
 <link>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>VendingMachine</title>
     <script src="app.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <h1>VendingMachine</h1>
+
     <div class="grid-container">
 
         <!--<h3>Display</h3>-->
-        <div class="item1"><p id="text-display">Insert Coins To Begin</p></div>
+        <div class="display"><p id="text-display">Insert Coins To Begin</p></div>
         <!--<h3>Selection</h3>-->
-        <div>x</div>
+        <div></div>
+        <div><p class="item-name"></p></div>
+        <div><p class="item-name"></p></div>
+        <div><p class="item-name"></p></div>
+        <div><p class="item-stock"></p></div>
+        <div><p class="item-stock"></p></div>
+        <div><p class="item-stock"></p></div>
         <div><button id="btn-A" class="key-button" value="A">A</button></div>
         <div><button id="btn-B" class="key-button" value="B">B</button></div>
         <div><button id="btn-C" class="key-button" value="C">C</button></div>
@@ -23,15 +30,20 @@
         <div><button id="return" value="RETURN">Return</button></div>
         <!--<h3>Service Machine</h3>-->
         <div><button id="service" value="SERVICE">Service</button></div>
-        <div>Item Vended</div>
+        <div id="item-vended"></div>
     </div>
-    <div>
-        <button id="dollar" class="coin-button" value="DOLLAR">$1</button>
-        <button id="quarter" class="coin-button" value="QUARTER">¢25</button>
-    </div>
-    <div>
-        <button id="dime" class="coin-button" value="DIME">¢10</button>
-        <button id="nickel" class="coin-button" value="NICKEL">¢5</button>
+    <div id="wallet-container">
+        <div id="coin-button-container">
+            <div>
+                <button id="dollar" class="coin-button" value="DOLLAR">$1</button>
+                <button id="quarter" class="coin-button" value="QUARTER">¢25</button>
+            </div>
+            <div>
+                <button id="dime" class="coin-button" value="DIME">¢10</button>
+                <button id="nickel" class="coin-button" value="NICKEL">¢5</button>
+            </div>
+        </div>
+        <h3>Your Wallet:</h3>
     </div>
 </body>
 </html>

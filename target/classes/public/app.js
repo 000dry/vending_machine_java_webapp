@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   ws.onopen = function(){
-
     console.log("Websocket open!");
     ws.send("Hello server!");
+
   };
 
   //EVERY TIME APP.JAVA'S STATE IS UPDATED IT IS RECEIVED HERE AS JSON AND STORED IN APPJSON VARIABLE AT TOP
@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function(){
     appJSON = JSON.parse(event.data);
     console.log(appJSON.vendingMachine);
     console.log(appJSON.user);
+    setItemNamesAndPrice();
+    setProductStockCount();
   };
 
   //USER INTERFACE/SET UP AND VALIDATE TRANSACTION BEFORE SENDING
@@ -36,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function(){
   const coinButtons = document.getElementsByClassName('coin-button');
   const returnButton = document.getElementById('return');
   const serviceButton = document.getElementById('service');
-
+  const vendedItem = document.getElementById('item-vended');
 
   // ADD EVENT LISTENERS TO KEY BUTTONS - SENDS MESSAGE TO SERVER TO UPDATE STATES APPROPRIATELY FOR VALID TRANSACTIIONS
   for(let i = 0; i < keyButtons.length; i++){
 
     keyButtons[i].addEventListener('click', function(){
-      const itemPrice = appJSON.vendingMachine.allItems.stock[keyButtons[i].value][0].price;
-      console.log(itemPrice);
+      const itemPrice = getProductPrice(keyButtons[i].value);
+      const itemName = getProductName(keyButtons[i].value);
 
       if(coinHandler.runningTotal >= itemPrice){
         ws.send(keyButtons[i].value);
@@ -52,6 +54,9 @@ document.addEventListener("DOMContentLoaded", function(){
         const valueToDisplay = coinHandler.runningTotal;
         textDisplay.innerHTML = "Amount inserted: " + valueToDisplay.toFixed(2);
 
+        if(itemName != "NO UPDATE"){
+          vendedItem.innerHTML = itemName;
+        }
       } else {
         textDisplay.innerHTML = "Please insert more coins"
 
@@ -98,4 +103,46 @@ document.addEventListener("DOMContentLoaded", function(){
   serviceButton.addEventListener('click', function(){
     ws.send(serviceButton.value);
   })
+
+  //SET TEXT FOR ITEM DISPLAYS
+
+  const getProductName = function(key){
+    const stock = appJSON.vendingMachine.allItems.stock[key];
+
+    if(stock.length != 0){
+      return stock[0].productName;
+    } else {
+      return "NO UPDATE";
+    }
+  }
+
+  const getProductPrice = function(key){
+    return appJSON.vendingMachine.allItems.stock[key][0].price;
+  }
+
+  const setItemNamesAndPrice = function(){
+    const itemTexts = document.getElementsByClassName('item-name');
+    const itemNames = [getProductName("A"), getProductName("B"), getProductName("C")];
+    const itemPrices = [getProductPrice("A"), getProductPrice("B"), getProductPrice("C")];
+
+    for(i = 0; i < itemTexts.length; i++){
+      if(itemNames[i] != "NO UPDATE"){
+        itemTexts[i].innerHTML = itemNames[i] + ": $" + itemPrices[i].toFixed(2);
+      }
+    }
+  }
+
+  const getProductStockCount = function(key){
+    return appJSON.vendingMachine.allItems.stock[key].length;
+  }
+
+  const setProductStockCount = function(){
+    const itemTexts = document.getElementsByClassName('item-stock');
+    const itemStock = [getProductStockCount("A"), getProductStockCount("B"), getProductStockCount("C")];
+
+    for(i = 0; i < itemTexts.length; i++){
+      itemTexts[i].innerHTML = itemStock[i];
+    }
+  }
+
 })
