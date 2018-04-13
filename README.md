@@ -21,6 +21,15 @@ __NOTE:__ The jar file has not yet been executed from a machine other than the o
 
 Alternatively, run Server.java from IntelliJ.
 
+## App Instructions
+
+* App loads with 10 of each item in the vending machine and $10 worth of coins in the user's wallet.
+* Click on a coin button to insert a coin and bring up a running total of coins inserted.
+* Hit either the button "A", "B" or "C" when you are ready to purchase.
+* The item selected will be vended in the bottom-right of the grid.
+* Hit "Return" to end the transaction and receive all change.
+* Hit "Service" to refil stock and reset the machine's available change.
+
 ## Built With
 
 * [Javalin](https://javalin.io/) - The web framework used
