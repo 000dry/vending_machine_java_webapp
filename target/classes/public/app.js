@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(appJSON.user);
     setItemNamesAndPrice();
     setProductStockCount();
+    setCoinCount();
   };
 
   //USER INTERFACE/SET UP AND VALIDATE TRANSACTION BEFORE SENDING
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const returnButton = document.getElementById('return');
   const serviceButton = document.getElementById('service');
   const vendedItem = document.getElementById('item-vended');
+  const newSessionButton = document.getElementById('new-session')
 
   // ADD EVENT LISTENERS TO KEY BUTTONS - SENDS MESSAGE TO SERVER TO UPDATE STATES APPROPRIATELY FOR VALID TRANSACTIIONS
   for(let i = 0; i < keyButtons.length; i++){
@@ -104,6 +106,15 @@ document.addEventListener("DOMContentLoaded", function(){
     ws.send(serviceButton.value);
   })
 
+  //NEW SESSION BUTTON TELLS MESSAGE HANDLER TO CREATE NEW APP
+
+  newSessionButton.addEventListener('click', function(){
+    ws.send(newSessionButton.value);
+    coinHandler.runningTotal = 0;
+    textDisplay.innerHTML = "Insert Coins To Begin";
+
+  })
+
   //SET TEXT FOR ITEM DISPLAYS
 
   const getProductName = function(key){
@@ -117,7 +128,13 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   const getProductPrice = function(key){
-    return appJSON.vendingMachine.allItems.stock[key][0].price;
+    const stock = appJSON.vendingMachine.allItems.stock[key];
+
+    if(stock.length != 0){
+      return stock[0].price;
+    } else {
+      return "NO UPDATE"
+    }
   }
 
   const setItemNamesAndPrice = function(){
@@ -142,6 +159,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for(i = 0; i < itemTexts.length; i++){
       itemTexts[i].innerHTML = itemStock[i];
+    }
+  }
+
+  const getCoinCount = function(coin){
+    return appJSON.user[coin];
+  }
+
+  const setCoinCount = function(){
+    const walletTexts = document.getElementsByClassName('wallet');
+    const coinCounts = [getCoinCount("dollars"),getCoinCount("quarters"),getCoinCount("dimes"),getCoinCount("nickels")];
+
+    for(i = 0; i < walletTexts.length; i++){
+      walletTexts[i].innerHTML = walletTexts[i].title + "s: " + coinCounts[i];
     }
   }
 

@@ -32,14 +32,6 @@ public class App{
         this.vendingMachine.refillAllCoins(); //VendingMachine starts with $50.00
         this.vendingMachine.restockAllItems(this.item1, this.item2, this.item3);
 
-        this.user.addCoinToWallet(Coin.DOLLAR);
-        this.user.addCoinToWallet(Coin.DOLLAR);
-        this.user.addCoinToWallet(Coin.QUARTER);
-        this.user.addCoinToWallet(Coin.QUARTER);
-        this.user.addCoinToWallet(Coin.QUARTER);
-        this.user.addCoinToWallet(Coin.DIME);
-        this.user.addCoinToWallet(Coin.DIME);
-        this.user.addCoinToWallet(Coin.NICKEL); //User starts with $3.00
     }
 
     public VendingMachine getVendingMachine() {

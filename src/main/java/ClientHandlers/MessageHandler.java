@@ -25,29 +25,29 @@ public class MessageHandler {
                 || this.message.equals("B")
                 || this.message.equals("C")
                 ) {
-            app.getVendingMachine().vendItem(this.message);
+            this.app.getVendingMachine().vendItem(this.message);
 
         } else if (this.message.equals("DOLLAR")
                 || this.message.equals("QUARTER")
                 || this.message.equals("DIME")
                 || this.message.equals("NICKEL")
                 ) {
-            boolean userHasCoin = app.getUser().removeCoinFromWallet(coinHandler.get(this.message));
-            app.getVendingMachine().insertCoin(userHasCoin, coinHandler.get(this.message));
+            boolean userHasCoin = this.app.getUser().removeCoinFromWallet(coinHandler.get(this.message));
+            this.app.getVendingMachine().insertCoin(userHasCoin, coinHandler.get(this.message));
+            this.app.getUser().countAllCoins();
 
         } else if(this.message.equals("SERVICE")) {
-
-            app.getVendingMachine().emptyAllCoins();
-            app.getVendingMachine().restockAllItems(app.getItem1(), app.getItem2(), app.getItem3());
-            app.getVendingMachine().refillAllCoins();
+            this.app.getVendingMachine().emptyAllCoins();
+            this.app.getVendingMachine().restockAllItems(this.app.getItem1(), this.app.getItem2(), this.app.getItem3());
+            this.app.getVendingMachine().refillAllCoins();
 
         } else if(this.message.equals("RETURN")) {
-            app.getVendingMachine().addCoinsInsertedToAvailableChange();
-            ArrayList<Coin> change = app.getVendingMachine().giveChangeFromTransaction();
-            app.getUser().receiveChange(change);
+            this.app.getVendingMachine().addCoinsInsertedToAvailableChange();
+            ArrayList<Coin> change = this.app.getVendingMachine().giveChangeFromTransaction();
+            this.app.getUser().receiveChange(change);
 
         } else {
-            System.out.println("^--Invalid message from Client");
+            System.out.println("^--Non-actionable message from Client");
         }
     }
 }

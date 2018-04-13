@@ -34,6 +34,9 @@ public class Server { //SERVER ADAPTED FROM https://javalin.io/tutorials/
             });
 
             ws.onMessage((WsSession session, String message) -> {
+                if (message.equals("NEW SESSION")) {
+                    app = new App();
+                }
                 mH = new MessageHandler(message, app);
                 mH.commandFromClient();
                 String updatedJsonInString = mapper.writeValueAsString(app);
