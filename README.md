@@ -4,6 +4,8 @@ A vending machine modelled in Java and hooked up to the front-end using the Java
 
 [Live Demo](https://vending-machine-app.herokuapp.com/) - live demo of the app deployed using Heroku.
 
+For demoing purposes, two console logs have been left in so that changes in the user and vending machine states can be tracked in the browser's console.
+
 ## Getting Started
 
 This app can be deployed locally from command line. From the root directory, run the following command:
