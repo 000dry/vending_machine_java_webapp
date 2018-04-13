@@ -35,10 +35,6 @@ public class VendingMachineTest {
         item3 = new Drink("Dr Pepper", 1.25);
 
         user = new User();
-        user.addCoinToWallet(Coin.DOLLAR);
-        user.addCoinToWallet(Coin.DOLLAR);
-        user.addCoinToWallet(Coin.QUARTER);
-        user.addCoinToWallet(Coin.NICKEL);
     }
 
     //STOCK
@@ -117,17 +113,6 @@ public class VendingMachineTest {
         assertEquals(210, availableChange.getChange().size());
     }
 
-//    @Test
-//    public void canGetTotalValueOfAvailableChange__empty(){
-//        assertEquals(0.00, vendingMachine.getTotalValueOfChange(), 0.00);
-//    }
-//
-//    @Test
-//    public void canGetTotalValueOfAvailableChange__afterRefill(){
-//        vendingMachine.refillAllCoins();
-//        assertEquals(50.00, vendingMachine.getTotalValueOfChange(), 0.00);
-//    }
-
     @Test
     public void canOnlyRefillChangeWhenEmpty(){
         vendingMachine.refillAllCoins();
@@ -158,13 +143,6 @@ public class VendingMachineTest {
         assertEquals(1, vendingMachine.getCoinsInserted().size());
     }
 
-    @Test
-    public void userCannotInsertCoinsNotInWallet(){
-        Coin coin = Coin.DIME;
-        boolean userHasCoin = user.removeCoinFromWallet(coin); //User.User not given DIME at @Before -- will equal false
-        vendingMachine.insertCoin(userHasCoin, coin);
-        assertEquals(0, vendingMachine.getCoinsInserted().size());
-    }
 
     @Test
     public void runningTotalUpdatesWhen__coinIsInserted(){
@@ -205,7 +183,7 @@ public class VendingMachineTest {
         ArrayList<Coin> change = vendingMachine.giveChangeFromTransaction();
         user.receiveChange(change);
         assertEquals(206, vendingMachine.getAvailableChange().getChange().size());
-        assertEquals(8, user.getWallet().size());
+        assertEquals(19, user.getWallet().size());
     }
 
 }

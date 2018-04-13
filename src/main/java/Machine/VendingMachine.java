@@ -89,17 +89,6 @@ public class VendingMachine {
         }
     }
 
-//    public double getTotalValueOfChange() {
-//        ArrayList<Coin> coins = this.availableChange.getChange();
-//        double total = 0.00;
-//
-//        for(int i = 0; i < coins.size(); i++){
-//            double coin = coins.get(i).getValue();
-//            total += coin;
-//        }
-//        return Math.round(total*100.00)/100.00;
-//    }
-
     public void emptyAllCoins() {
         this.availableChange.getChange().clear();
     }

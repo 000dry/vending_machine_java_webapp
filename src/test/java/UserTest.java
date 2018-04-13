@@ -15,15 +15,15 @@ public class UserTest {
     }
 
     @Test
-    public void canGetWallet__walletStartsEmpty(){
-        assertEquals(0, user.getWallet().size());
+    public void canGetWallet__walletStartWith15Coins(){
+        assertEquals(15, user.getWallet().size());
     }
 
     @Test
     public void canAddCoinsToWallet(){
         user.addCoinToWallet(Coin.DOLLAR);
         user.addCoinToWallet(Coin.QUARTER);
-        assertEquals(2, user.getWallet().size());
+        assertEquals(17, user.getWallet().size());
     }
 
     @Test
@@ -31,16 +31,9 @@ public class UserTest {
         user.addCoinToWallet(Coin.DOLLAR);
         user.addCoinToWallet(Coin.QUARTER);
         user.removeCoinFromWallet(Coin.DOLLAR);
-        assertEquals(1, user.getWallet().size());
+        assertEquals(16, user.getWallet().size());
     }
 
-    @Test
-    public void canRemoveCoinsFromWallet__removesOnlyTheCorrectCoin(){
-        user.addCoinToWallet(Coin.DOLLAR);
-        user.addCoinToWallet(Coin.QUARTER);
-        user.removeCoinFromWallet(Coin.DOLLAR);
-        assertEquals(Coin.QUARTER, user.getWallet().get(0));
-    }
 
     @Test
     public void canRemoveCoinsFromWallet__returnsTrueIfSuccessful(){
@@ -51,6 +44,8 @@ public class UserTest {
 
     @Test
     public void canRemoveCoinsFromWallet__returnsFalseIfWalletIsEmpty(){
+        for(int i = 0; i < user.getWallet().size();)
+        user.getWallet().remove(0);
         assertEquals(false, user.removeCoinFromWallet(Coin.DOLLAR));
     }
 }
