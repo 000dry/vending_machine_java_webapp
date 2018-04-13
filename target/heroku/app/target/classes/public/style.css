@@ -31,5 +31,7 @@ button:hover{
 }
 
 #wallet-container{
-  margin-left: 520px;
+  background-color: #cecece;
+  margin-left: 5px;
+  width: 620px;
 }

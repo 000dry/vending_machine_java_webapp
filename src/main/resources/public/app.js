@@ -58,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
         if(itemName != "NO UPDATE"){
           vendedItem.innerHTML = itemName;
+          setTimeout(function(){
+            vendedItem.innerHTML = "";
+          }, 3000)
         }
       } else {
         textDisplay.innerHTML = "Please insert more coins"
