@@ -25,6 +25,7 @@ Alternatively, run Server.java from IntelliJ.
 
 * [Javalin](https://javalin.io/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
+* [Jackson](https://github.com/FasterXML/jackson) - JSON library for Java
 
 
 ## Acknowledgments
