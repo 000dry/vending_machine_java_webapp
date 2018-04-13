@@ -29,6 +29,7 @@ Alternatively, run Server.java from IntelliJ.
 * The item selected will be vended in the bottom-right of the grid.
 * Hit "Return" to end the transaction and receive all change.
 * Hit "Service" to refil stock and reset the machine's available change.
+* Hit "New Session" to reset all states.
 
 ## Built With
 
