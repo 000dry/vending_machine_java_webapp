@@ -19,7 +19,7 @@ This will run the app and launch the server, which can be found in the browser a
 http://localhost:7070/
 ```
 
-__NOTE:__ The jar file has not yet been executed from a machine other than the one it was built on but as far as I know I didn't create any custom build paths, so the build should be universal.
+__NOTE:__ The jar file has not yet been executed from a machine other than the one it was built on but, as far as I know, no custom build paths were created, so the build should be universal.
 
 Alternatively, run Server.java from IntelliJ.
 
