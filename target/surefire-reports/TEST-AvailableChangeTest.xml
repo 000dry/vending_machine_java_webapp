@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="AvailableChangeTest" time="0.01" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="AvailableChangeTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="10+46"/>
@@ -65,7 +65,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="AvailableChangeTest" name="canRefillDimes" time="0.01"/>
+  <testcase classname="AvailableChangeTest" name="canRefillDimes" time="0.005"/>
   <testcase classname="AvailableChangeTest" name="canRefillQuarters" time="0"/>
   <testcase classname="AvailableChangeTest" name="canGetChange__startsEmpty" time="0"/>
   <testcase classname="AvailableChangeTest" name="canAddCoin" time="0"/>

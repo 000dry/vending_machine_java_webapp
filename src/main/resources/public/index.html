@@ -8,32 +8,38 @@
 </head>
 <body>
     <h1>VendingMachine</h1>
+    <a href="https://github.com/josephMichaelRyan/vending_machine_java_webapp">GitHub</a>
+
     <div>
+
         <div class="grid-container">
 
-            <!--<h3>Display</h3>-->
+            <!--info display-->
             <div class="display"><p id="text-display">Insert Coins To Begin</p></div>
-            <!--<h3>Selection</h3>-->
             <div></div>
+            <!--product name and price display-->
             <div><p class="item-name"></p></div>
             <div><p class="item-name"></p></div>
             <div><p class="item-name"></p></div>
+            <!--stock display-->
             <div><p class="item-stock"></p></div>
             <div><p class="item-stock"></p></div>
             <div><p class="item-stock"></p></div>
+            <!--keys-->
             <div><button id="btn-A" class="key-button" value="A">A</button></div>
             <div><button id="btn-B" class="key-button" value="B">B</button></div>
             <div><button id="btn-C" class="key-button" value="C">C</button></div>
-            <!--<h3>Insert Coins</h3>-->
-
-            <!--<h3>Return Coins</h3>-->
+            <!--return button-->
             <div><button id="return" value="RETURN">Return</button></div>
-            <!--<h3>Service Machine</h3>-->
+            <!--service button-->
             <div><button id="service" value="SERVICE">Service</button></div>
+            <!--item vended-->
             <div id="item-vended"></div>
         </div>
+
         <div id="wallet-container">
             <div id="coin-button-container">
+                <!--coin buttons-->
                 <div>
                     <button id="dollar" class="coin-button" value="DOLLAR">$1</button>
                     <button id="quarter" class="coin-button" value="QUARTER">¢25</button>
@@ -43,16 +49,16 @@
                     <button id="nickel" class="coin-button" value="NICKEL">¢5</button>
                 </div>
             </div>
+            <!--wallet display-->
             <h3>Your Wallet:</h3>
             <p class="wallet" title="Dollar"></p>
             <p class="wallet" title="Quarter"></p>
             <p class="wallet" title="Dime"></p>
             <p class="wallet" title="Nickel"></p>
+            <!--new session button-->
             <div><button id="new-session" value="NEW SESSION">New Session</button></div>
         </div>
-    </div>
-    <div>
-        <a href="https://github.com/josephMichaelRyan/vending_machine_java_webapp">GitHub</a>
+
     </div>
 </body>
 </html>

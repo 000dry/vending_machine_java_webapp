@@ -2,7 +2,6 @@ package App;
 
 import Machine.VendingMachine;
 import Money.AvailableChange;
-import Money.Coin;
 import Stock.Chocolate;
 import Stock.Drink;
 import Stock.Savoury;
