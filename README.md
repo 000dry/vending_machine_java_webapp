@@ -4,6 +4,8 @@ A vending machine modelled in Java and hooked up to the front-end using the Java
 
 [Live Demo](https://vending-machine-app.herokuapp.com/) - live demo of the app deployed using Heroku.
 
+For demoing purposes, two console logs have been left in so that changes in the user and vending machine states can be tracked in the browser's console.
+
 ## Getting Started
 
 This app can be deployed locally from command line. From the root directory, run the following command:
@@ -17,7 +19,7 @@ This will run the app and launch the server, which can be found in the browser a
 http://localhost:7070/
 ```
 
-__NOTE:__ The jar file has not yet been executed from a machine other than the one it was built on but as far as I know I didn't create any custom build paths, so the build should be universal.
+__NOTE:__ The jar file has not yet been executed from a machine other than the one it was built on but, as far as I know, no custom build paths were created, so the build should be universal.
 
 Alternatively, run Server.java from IntelliJ.
 
