@@ -1,7 +1,7 @@
-#Overview
+# Overview
 
 
-##User
+## User
 ```
 ArrayList<Coin> wallet;
 int dollars;
@@ -11,14 +11,14 @@ int nickels;
 ```
 Has a wallet and the ability to track the quantity of each type of coin.
 
-##Stock Item
+## Stock Item
 ```
 String productName;
 double price;
 ```
 Product name and price, no real special methods or properties.
 
-##Coin
+## Coin
 ```
 NICKEL(0.05),
 DIME(0.10),
@@ -27,7 +27,7 @@ DOLLAR(1.00);
 ```
 Coin enum with values. Although further down the line this required converting back and forth, it helps the coin to have properties beyond just its value, and means only certain predefined values can exist (e.g. no chance of a 35 cent coin sneaking through).
 
-##Available Change
+## Available Change
 ```
 ArrayList<Coin> change;
 int dollarQuantity;
@@ -37,7 +37,7 @@ int nickelQuantity;
 ```
 Array of coins with integers that provide the quantities of each coin type the machine should have on startup/refill.
 
-##KeyMap
+## KeyMap
 ```
 public KeyMap(){
     this.stock = new HashMap<>();
@@ -48,7 +48,7 @@ public KeyMap(){
 ```
 HashMap that pairs alphabetical string keys with empty ArrayList values. VendingMachine class can fill these with StockItems.
 
-##Vending Machine
+## Vending Machine
 ```
 AvailableChange availableChange;
 ArrayList<Coin> coinsInserted;
@@ -66,7 +66,7 @@ Where the business happens.
 
 * runningTotal — used to track total value of coins inserted and deductions when a product is purchased. Also used to calculate how many of each coin is due when change is given.
 
-##App
+## App
 ```
 VendingMachine vendingMachine;
 User user;
@@ -79,7 +79,7 @@ This class exists to instantiate all the required components of the Vending Mach
 
 As this is where everything operates from when running, it may have been better to have the majority of the methods live here.
 
-##Server
+## Server
 ```
 ws.onMessage((WsSession session, String message) -> {
     if (message.equals("NEW SESSION")) {
@@ -99,7 +99,7 @@ Processes this using the MessageHandler class, which are provided the App in its
 
 The message is processed with the commandFromClient() method and the updated app is sent back to the client as JSON.
 
-##CoinHandler
+## CoinHandler
 ```
 public CoinHandler(){
     this.coinFromString = new HashMap<>();
@@ -112,7 +112,7 @@ public CoinHandler(){
 CoinHandler is a HashMap that pairs ‘coin’ string keys with their Enum counterpart.
 As messages from the client are received as strings, this is helpful for converting the message to something useful to the controller/model.
 
-##MessageHandler
+## MessageHandler
 ```
 if(this.message.equals("A")
         || this.message.equals("B")
@@ -175,7 +175,7 @@ if(this.message.equals("A")
 
 
 
-app.js
+## app.js
 
 * generally speaking, consists of adding event listeners to buttons, which send a message to the server corresponding to the button/action when clicked.
 
