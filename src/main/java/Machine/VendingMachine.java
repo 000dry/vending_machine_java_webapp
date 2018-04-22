@@ -66,16 +66,14 @@ public class VendingMachine {
 
     //VENDING
 
-    public StockItem vendItem(String key) {
+    public void vendItem(String key) {
         ArrayList<StockItem> remainingStock = this.allItems.stock.get(key);
 
         if(remainingStock.size() > 0) {
             StockItem vendedItem = remainingStock.remove(0);
             this.allItems.removeStock(key, remainingStock);
             this.runningTotal -= vendedItem.getPrice();
-            return vendedItem;
         }
-        return null;
     }
 
     //SERVICING

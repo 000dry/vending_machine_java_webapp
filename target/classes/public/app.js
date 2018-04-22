@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
   returnButton.addEventListener('click', function(){
     coinHandler.runningTotal = 0;
-    textDisplay.innerHTML = "0.00";
+    textDisplay.innerHTML = "Insert Coins To Begin";
     ws.send(returnButton.value);
     setTimeout(function(){
-      textDisplay.innerHTML = "Insert Coins To Begin";
+      textDisplay.innerHTML = "0.00";
     }, 3000)
   })
 

@@ -86,11 +86,6 @@ public class VendingMachineTest {
 
     //VENDING
 
-    @Test
-    public void canVendItem__returnsItem(){
-        vendingMachine.restockItem("A", item1);
-        assertEquals(item1, vendingMachine.vendItem("A"));
-    }
 
     @Test
     public void canVendItem__diminishesStock(){
@@ -99,12 +94,6 @@ public class VendingMachineTest {
         int stockOfKeyA = vendingMachine.getStockCountOf("A");
         assertEquals(9, stockOfKeyA);
     }
-
-    @Test
-    public void canVendItem__unlessStockIsEmpty(){
-        assertEquals(null, vendingMachine.vendItem("A"));
-    }
-
     //SERVICING
 
     @Test
