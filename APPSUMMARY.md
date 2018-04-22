@@ -1,5 +1,12 @@
 # Overview
 
+Vending machine composed of Java models and controller (handlers), with Javalin server that serves up JSON (converted using Jackson ObjectMapper, sent via Websocket) to a JS client.
+
+__Javalin__ - Java/Kotlin micro web framework built on top of Jetty with only slightly less performance. Similar to Sinatra/Express/Koa. Useful condensation of some Jetty methods (e.g. websockets are easier to utilise). Great docs and tutorials, from which my server was adapted.
+
+__Jackson__ - used Jackson’s ObjectMapper to convert the App Java object to JSON so that it could be used by the JS client.
+
+__Maven__ - dependency and build management. Used because Javalin docs are geared towards Maven, including tutorial on Heroku deployment.
 
 ## User
 ```
